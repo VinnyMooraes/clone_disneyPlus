@@ -1,3 +1,69 @@
+//imports - utilities
+@use 'variaveis.scss';
+@use 'hero.scss';
+
+//fontes externas
+@font-face {        //fonte padrão - site inteiro
+    font-family: Avenir;
+    src: url(../fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(../fonts/Avenir-Regular.woff2);
+    font-weight: 700;
+}
+
+// reset - All pages
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
-    background-color: #ccc;
+    background-color: variaveis.$corDeFundo;
+    font-family: Avenir, sans-serif;
+}
+h1{
+    color: #fff; 
+    font-family: sans-serif;
+}
+
+//mixin´s
+@mixin text($fontSize:16px){
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corTextoPrincipal;
+}
+
+@mixin title($fontSize: 40px){
+    @include text($fontSize);
+    color: variaveis.$corTextoSecundario;
+}
+
+.text--big{
+    @include text(18px);
+}
+.text{
+    @include text;
+}
+.text--small{
+    @include text(12px);
+}
+
+.title{
+    @include title;
+}
+.title--big{
+    @include title(44px);
+}
+.title--small{
+    @include title(28px);
+}
+.link-text{
+    @include text(18px);
+    color: variaveis.$corTextoSecundario;
+    text-decoration: underline;
 }

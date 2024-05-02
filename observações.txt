@@ -1,4 +1,3 @@
 1 - Utilizar o GULP para minificar as imagens e código js;
-1.1 - instalação "npm init --yes"
 2 - Instalação do SASS como dependência de desenvolvimento;
-2.1 Instalação "npm i --save-dev gulp gulp-sass"
+3 - Minificar as imagens com Gulp Image-min
