@@ -1,6 +1,8 @@
 //imports - utilities
-@use 'variaveis.scss';
-@use 'hero.scss';
+@use '_variaveis.scss';
+@use '_hero.scss';
+@use '_shows.scss';
+@use '_plans.scss';
 
 //fontes externas
 @font-face {        //fonte padrão - site inteiro
@@ -20,11 +22,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Avenir, sans-serif; //font family no body não se aplica a buttons e inputs
 }
 
 body{
     background-color: variaveis.$corDeFundo;
-    font-family: Avenir, sans-serif;
 }
 h1{
     color: #fff; 
@@ -66,4 +68,17 @@ h1{
     @include text(18px);
     color: variaveis.$corTextoSecundario;
     text-decoration: underline;
+}
+
+.button{
+    display: block;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    color: variaveis.$corTextoSecundario;
+    background-color: #6421ff;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 2vw;
+    margin-bottom: 8px;
 }

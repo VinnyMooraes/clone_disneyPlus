@@ -6,8 +6,6 @@
     <title> Clone Disney+ </title>
     <!-- CSS -->
     <link rel="stylesheet" href="dist/styles/css/main.css">
-    <!-- FONTS -->
-
 </head>
 <body>
     <section class="hero" >
@@ -32,7 +30,7 @@
             <ul class="hero__content__combos">
                 <li class="hero__content__combos__combo">
                     <img src="src/images/logos/disney_star_plus.png" alt="logo: Disney + - Combo Plus">
-                    <button> Assine Agora </button>
+                    <button class="button"> Assine Agora </button>
                     <span class="text">
                         R$ 45,90/mês
                     </span>
@@ -40,7 +38,7 @@
 
                 <li class="hero__content__combos__combo">
                     <img src="/src/images/logos/disney_star_plus_starzplay.png" alt="logo: Disney + - Combo Starz Play">
-                    <button> Assine Agora </button>
+                    <button class="button"> Assine Agora </button>
                     <span class="text">
                         R$ 55,90/mês
                     </span>
@@ -51,5 +49,122 @@
             </p>
         </div>
     </section>
+    <section class="shows">
+        <nav class="shows__tabs">
+            <button data-tab-button="em_breve" class="shows__tabs__button shows__tabs__button--is--active"> <!--aplicar modificador-->
+                Em breve
+            </button>
+            <button data-tab-button="mais_populares" class="shows__tabs__button">
+                Mais populares
+            </button>
+            <button data-tab-button="mais_no_starPlus" class="shows__tabs__button">
+                Mais no Star+
+            </button>
+        </nav>
+
+        <ul data-tab-id="em_breve" class="shows__list shows__list--is--active"> <!--ativa-->
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="imagem: spider man">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="imagem: spider man">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="imagem: spider man">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="imagem: spider man">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="imagem: spider man">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="imagem: spider man">
+            </li>
+        </ul>
+        <ul data-tab-id="mais_populares" class="shows__list ">
+            <li class="shows__list__item">
+                <img src="src/images/mais_populares/bluey.jpg" alt="imagem: spider man">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="imagem: spider man">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="imagem: spider man">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="imagem: spider man">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="imagem: spider man">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="imagem: spider man">
+            </li>
+        </ul>
+        <ul data-tab-id="mais_no_starPlus" class="shows__list ">
+            <li class="shows__list__item">
+                <img src="src/images/mais_no_star_plus/libertadores.jpg" alt="imagem: spider man">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="imagem: spider man">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="imagem: spider man">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="imagem: spider man">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="imagem: spider man">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="imagem: spider man">
+            </li>
+        </ul>
+    </section>
+    <section class="plans">
+        <h2 class="title--big">
+            Escolha o seu plano
+        </h2>
+        <ul class="plans__list">
+            <li class="plans__list__item">
+                <img src="src/images/logos/disneyplus_underline.png" alt="imagem: logo disney+">
+                <strong class="title--small"> R$ 27,90* </strong>
+                <p class="text--big">
+                    No Disney+ você encontra as últimas estreias do cinema, originais e clássicos inesquecíveis.
+                </p>
+                <button class="button">
+                    Assine agora
+                </button>
+            </li>
+            <li class="plans__list__item">
+                <img src="src/images/logos/disney_star_plus_sm.png" alt="imagem: logo disney+">
+                <strong class="title--small"> R$ 27,90* </strong>
+                <p class="text--big">
+                    No Disney+ você encontra as últimas estreias do cinema, originais e clássicos inesquecíveis.
+                </p>
+                <button class="button">
+                    Assine agora
+                </button>
+            </li>
+            <li class="plans__list__item">
+                <img src="src/images/logos/disney_star_plus_starzplay_underline.png" alt="imagem: logo disney+">
+                <strong class="title--small"> R$ 27,90* </strong>
+                <p class="text--big">
+                    No Disney+ você encontra as últimas estreias do cinema, originais e clássicos inesquecíveis.
+                </p>
+                <button class="button">
+                    Assine agora
+                </button>
+            </li>
+        </ul>
+        <p class="text--small">
+            *O preço pode variar caso a assinatura seja feita através de outras plataformas.
+        </p>
+    </section>
+
+<!-- SCRIPTS -->
+    <script src="src/js/main.js"></script>
 </body>
 </html>
