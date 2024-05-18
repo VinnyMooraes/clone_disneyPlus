@@ -1,7 +1,20 @@
 document.addEventListener('DOMContentLoaded', function(){ //observa o carregamento do DOM
     const buttons = document.querySelectorAll( '[data-tab-button]'); //pegando os buttons do atributo "x" 
     const questions = document.querySelectorAll('[data-faq-question]');
+
+    const heroSection = document.querySelector('.hero');
+    const alturaHero = heroSection.clientHeight;
+
+    window.addEventListener('scroll', function(){   //pegando a posição do scroll na vertical
+        const posicaoAtual = window.scrollY;        //pegando a altura do elemento
+        if(posicaoAtual < alturaHero){      //melhoria da perfomance ao inverter a lógica do ">" para o "<"
+            ocultarElementosHeader();
+        }else{
+            exibeElementosHeader();
+        }
+    })   
     
+    //section - atrações - efeitos de transição da abas da pagina
     for (let i = 0; i< buttons.length; i++){ //iterando butoes
         buttons[i].addEventListener('click', function(botao){    //pegando butão atual
             const abaAlvo =  botao.target.dataset.tabButton; //recupera o conteudo do botão
@@ -13,12 +26,23 @@ document.addEventListener('DOMContentLoaded', function(){ //observa o carregamen
         })
     }
 
+    //section FAQ - accordion
     for(let i = 0; i<questions.length; i++){
         questions[i].addEventListener('click', abreOufechaResposta);
     }
 })
 
 //funções
+    function ocultarElementosHeader(){
+        const header = document.querySelector('header');
+        header.classList.add('header--is-hidden')
+    }
+
+    function exibeElementosHeader(){
+        const header = document.querySelector('header');
+        header.classList.remove('header--is-hidden')
+    }
+
     function abreOufechaResposta(elemento){
         const classe = 'faq__questions__item--is-open';  //a classe indica que o item esta "aberto"
         const elementoPai = elemento.target.parentNode;

@@ -1,10 +1,12 @@
 //imports - utilities
-@use '_variaveis.scss';
-@use '_hero.scss';
-@use '_shows.scss';
-@use '_plans.scss';
-@use 'available-devices.scss';
-@use '_faq.scss';
+@use '_variaveis';
+@use '_hero';
+@use '_shows';
+@use '_plans';
+@use '_available-devices';
+@use '_faq';
+@use '_footer';
+@use '_header';
 
 //fontes externas
 @font-face {        //fonte padrão - site inteiro
@@ -25,6 +27,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Avenir, sans-serif; //font family no body não se aplica a buttons e inputs
+    list-style: none; //nemhum elemento de lista com marcador
 }
 
 body{
@@ -73,16 +76,45 @@ h1{
 }
 
 .button{
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 60px;
     font-size: 18px;
     color: variaveis.$corTextoSecundario;
-    background-color: #6421ff;
+    background-color:variaveis.$corButtonPrimario;
     text-transform: uppercase;
     border-radius: 4px;
-    margin-top: 2vw;
-    margin-bottom: 8px;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corButtonPrimario;
+
+    &:hover{
+        background-color: lighten(variaveis.$corButtonPrimario, 3%); //funçao para modificar a cor
+
+    }
+
+    &--secundary{
+        background-color: variaveis.$corButtonSecundario;
+        border-color: variaveis.$corButtonSecundario;
+        
+        &:hover{
+            background-color: lighten(variaveis.$corButtonSecundario, 3%); //funçao para modificar a cor
+
+        }
+    }
+    &--dark{
+        background-color: rgba($color: variaveis.$corButtonDark, $alpha: 0.8);  //cor com opacidade
+        border-color: variaveis.$corTextoSecundario;
+    
+        &:hover{
+            background-color: variaveis.$corTextoSecundario;
+            color: variaveis.$corDeFundo;
+
+        }
+    }
 }
 .image-text-section{   //classe - assista em qualquer lugar
     padding: 5.6vw;

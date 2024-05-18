@@ -1,0 +1,52 @@
+//importações - utilitarios
+@use 'variaveis';
+
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: variaveis.$corDeFundo;
+    transition: background-color .5s ease;
+    z-index: 1; //privilegio de camadas sobre os demais itens da pagina
+
+    &--is-hidden{
+        background-color: transparent;
+        transition: background-color .5s ease;
+
+        .header{
+            &__logo, &__links__item:first-child{    //first child = primeiro item/primeiro filho do elemento pai (a lista no caso, então o primeiro filho é o <li>
+                opacity: 0; //opacidade = transparencia
+                visibility: hidden; //visibilidade = oculta (não disponível)
+                transition: opacity 0.5s ease;        
+            }
+        }
+    }
+
+    &__container{
+        padding: 8px 36px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        max-width: 80px;
+        width: 100%;
+        margin: 5px;
+        transition: opacity 0.5s ease;
+    }
+
+    &__links{   //lista
+        display: flex;  //itens lado a lado
+        
+        &__item{    //itens da lista
+            margin: 5px;
+            transition: opacity 0.5s ease;
+        }
+    }
+
+    .button{
+        height: 50px;
+        display: flex;  //para alinhar os buttons
+        align-items: center;
+    }
+}
