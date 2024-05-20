@@ -26,6 +26,11 @@
         padding: 8px 36px;
         display: flex;
         justify-content: space-between;
+
+        //media querie
+        @media (max-width:768px){
+            padding: 0 12px 0 20px;
+        }
     }
 
     &__logo{
@@ -33,6 +38,11 @@
         width: 100%;
         margin: 5px;
         transition: opacity 0.5s ease;
+
+        //media querie
+        @media (max-width:768px){
+            max-width: 64px;
+        }
     }
 
     &__links{   //lista
@@ -48,5 +58,13 @@
         height: 50px;
         display: flex;  //para alinhar os buttons
         align-items: center;
+
+        //media querie
+        @media (max-width: 768px){
+            font-size: 13px;
+            padding: 8px 11px;
+            height: 40px;
+            letter-spacing: 0;  //espaçamento entre as letras
+        }
     }
 }
