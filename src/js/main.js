@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function(){ //observa o carregamen
     const heroSection = document.querySelector('.hero');
     const alturaHero = heroSection.clientHeight;
 
+    //pegando posição do scroll
     window.addEventListener('scroll', function(){   //pegando a posição do scroll na vertical
         const posicaoAtual = window.scrollY;        //pegando a altura do elemento
         if(posicaoAtual < alturaHero){      //melhoria da perfomance ao inverter a lógica do ">" para o "<"

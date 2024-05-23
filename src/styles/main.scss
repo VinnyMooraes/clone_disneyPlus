@@ -28,7 +28,6 @@
     box-sizing: border-box;
     font-family: Avenir, sans-serif; //font family no body não se aplica a buttons e inputs
     list-style: none; //nemhum elemento de lista com marcador
-    // border: 1px solid #fff;
 }
 
 body{
@@ -120,7 +119,6 @@ h1{
 
     &:hover{
         background-color: lighten(variaveis.$corButtonPrimario, 3%); //funçao para modificar a cor
-
     }
 
     &--secundary{
@@ -129,7 +127,6 @@ h1{
         
         &:hover{
             background-color: lighten(variaveis.$corButtonSecundario, 3%); //funçao para modificar a cor
-
         }
     }
     &--dark{
@@ -139,7 +136,6 @@ h1{
         &:hover{
             background-color: variaveis.$corTextoSecundario;
             color: variaveis.$corDeFundo;
-
         }
     }
 }
