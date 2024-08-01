@@ -30,8 +30,6 @@ function styles(){
 
 //ao executar a minificação das imagens elas estão corrompendo
 
-
-
 // executando função
 // exports.default = gulp.parallel(styles, images, scripts);
 exports.default = gulp.parallel(styles, scripts);

@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function(){ //observa o carregamen
         const classe = 'faq__questions__item--is-open';  //a classe indica que o item esta "aberto"
         const elementoPai = elemento.target.parentNode;
 
-
         elementoPai.classList.toggle(classe)    //evento de abrir e fechar o elemento pai do question
     }
     function removeButtonActive(){
@@ -57,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function(){ //observa o carregamen
         for(let i = 0;i < buttons.length; i++){
             buttons[i].classList.remove('shows__tabs__button--is--active')
         }
-
     }
 
     function escondeTodasAbas(){
